@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
       child: Scaffold(
         backgroundColor: AppColors.background,
-        resizeToAvoidBottomInset: true,
+        resizeToAvoidBottomInset: false,
         body: LayoutBuilder(
           builder: (context, constraints) {
             final h = constraints.maxHeight;
@@ -100,6 +100,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 SafeArea(
                   child: SingleChildScrollView(
                     physics: const ClampingScrollPhysics(),
+                    padding: EdgeInsets.only(
+                      bottom: MediaQuery.of(context).viewInsets.bottom,
+                    ),
                     child: ConstrainedBox(
                       constraints: BoxConstraints(
                         minHeight: h -

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import '../../core/services/auth_service.dart';
 import '../../core/services/storage_service.dart';
 import '../models/user_model.dart';
@@ -30,8 +32,16 @@ class AuthRepository {
       email: user.email,
       photoUrl: user.photoURL,
     );
-    await _userRepository.upsert(model);
     await _storageService.setLoggedIn(true);
+    // Fire-and-forget Firestore write — must NOT block the login flow.
+    // If Firestore is unreachable or the database isn't created in the
+    // Firebase project, the call can hang indefinitely otherwise.
+    unawaited(
+      _userRepository
+          .upsert(model)
+          .timeout(const Duration(seconds: 5))
+          .catchError((_) {}),
+    );
     return model;
   }
 

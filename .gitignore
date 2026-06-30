@@ -46,3 +46,9 @@ app.*.map.json
 
 # Claude Code
 .claude/
+
+# Android signing — NEVER commit
+android/key.properties
+android/keystore/
+*.jks
+*.keystore
