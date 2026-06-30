@@ -1,0 +1,40 @@
+name: alive_streaming
+description: "Alive Streaming - Flutter live streaming application."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.9
+
+  # Firebase
+  firebase_core: ^4.11.0
+  firebase_auth: ^6.5.4
+  google_sign_in: ^7.2.0
+
+  # State management
+  provider: ^6.1.5+1
+
+  # Local storage
+  shared_preferences: ^2.5.5
+
+  # Networking (REST API ready)
+  dio: ^5.10.0
+
+  # Fonts
+  google_fonts: ^8.1.0
+  cloud_firestore: ^6.6.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/

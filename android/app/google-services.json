@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "52583745718",
+    "project_id": "alive-streaming",
+    "storage_bucket": "alive-streaming.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52583745718:android:02b0c94bd31019c6d5be17",
+        "android_client_info": {
+          "package_name": "com.example.alive_streaming"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrxNzlj5zH9rlgsT1TgQtgOM-pik0fefM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
